@@ -62,9 +62,10 @@ main {
 
 img {
   height: 130px;
+  width: 130px;
   border: none;
   background-color: none;
-  padding: 0.5em;
+  padding: 1em;
   margin-top: -20px;
 }
 

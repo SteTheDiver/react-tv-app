@@ -12,19 +12,12 @@ function Form(props) {
   const [bundle, setBundle] = useState("");
   const [program, setProgram] = useState("");
 
-  // function addItem() {
-  //   setCart((prevItems) => {
-  //     return [...prevItems, program, bundle];
-  //   });
-  //   setBundle("");
-  //   setProgram("");
-  // }
   return (
     <div className="form">
       <FormControl variant="filled">
         <InputLabel id="demo-simple-select-filled-label">Package</InputLabel>
         <Select
-          style={{ width: "9em" }}
+          style={{ width: "10em" }}
           displayEmpty
           inputProps={{ "aria-label": "Without label" }}
           value={bundle.name}
@@ -43,7 +36,7 @@ function Form(props) {
       <FormControl variant="filled">
         <InputLabel id="demo-simple-select-filled-label">Programs</InputLabel>
         <Select
-          style={{ width: "9em" }}
+          style={{ width: "10em" }}
           displayEmpty
           inputProps={{ "aria-label": "Without label" }}
           value={program.name}

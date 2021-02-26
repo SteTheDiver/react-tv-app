@@ -1,10 +1,14 @@
 import React from "react";
 
-function Selection(props) {
+function Selection({ name, image }) {
   return (
     <div>
-      <h3>{props.name}</h3>
-      <img src={props.image} />
+      <h3>{name}</h3>
+      {image &&
+        image.length > 0 &&
+        image.map((i) => {
+          return <img src={i} />;
+        })}
     </div>
   );
 }
