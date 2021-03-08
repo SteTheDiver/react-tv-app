@@ -58,7 +58,7 @@ function Form(props) {
         onClick={() => {
           props.onAdd(bundle, program);
           setBundle("");
-          setProgram("");
+          // setProgram("");
         }}
       >
         <span>Add your selection</span>
