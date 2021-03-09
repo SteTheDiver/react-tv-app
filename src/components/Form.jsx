@@ -9,8 +9,8 @@ import FormHelperText from "@material-ui/core/FormHelperText";
 import Button from "@material-ui/core/Button";
 
 function Form(props) {
-  const [bundle, setBundle] = useState("");
-  const [program, setProgram] = useState("");
+  const [bundle, setBundle] = useState([]);
+  const [program, setProgram] = useState([]);
 
   return (
     <div className="form">
@@ -58,7 +58,7 @@ function Form(props) {
         onClick={() => {
           props.onAdd(bundle, program);
           setBundle("");
-          // setProgram("");
+          setProgram("");
         }}
       >
         <span>Add your selection</span>

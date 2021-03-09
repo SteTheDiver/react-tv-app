@@ -7,12 +7,12 @@
 
 nav {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
 }
 
 .links {
-  width: 30%;
+  width: 15%;
   display: flex;
   justify-content: space-between;
 }
@@ -52,11 +52,6 @@ p {
   justify-content: space-evenly;
 }
 
-nav {
-  display: flex;
-  justify-content: space-evenly;
-}
-
 main {
   background: linear-gradient(
     0deg,
@@ -70,7 +65,7 @@ main {
   padding-top: 0.1em;
 }
 
-.program {
+.programs__container {
   padding: 0 8em;
   justify-content: flex-start;
   display: flex;
@@ -86,25 +81,70 @@ img {
   margin-top: -20px;
 }
 
-.legend {
-  display: flex;
-  justify-content: space-around;
-  margin-top: -3.5em;
-}
+/* Orders */
 
 .confirmation {
   margin-bottom: 1em;
 }
 
-.product {
+.cart__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 50px;
+}
+
+.cart {
+  min-height: 40vh;
+  max-height: fit-content;
+  box-shadow: 0px 3px 20px gray;
+  flex-wrap: wrap;
+  border-radius: 10px;
+  width: 40vw;
+  margin: 4em 10em;
+  padding-top: 4em;
+}
+
+.orders {
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: space-around;
+  border: 0.5px solid grey;
+  margin: 1em 10em;
+  margin-top: 3px;
+}
+
+.btn__delete {
+  padding: 20px 0;
+  /* padding-bottom: 10px; */
+}
+
+.orders h3 {
+  color: black;
+  font-weight: 400;
 }
 
 .product h3 {
   color: black;
 }
+
+h1.about__title {
+  color: black;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 2.5em;
+}
+
+p.about__text {
+  color: black;
+  font-family: "Open Sans", sans-serif;
+  text-transform: none;
+  font-weight: 400;
+  font-size: 2em;
+}
+
+/* Modal */
 
 .mymodal {
   position: fixed;
@@ -125,22 +165,12 @@ img {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.mymodal__content {
-  height: 10vh;
-  color: black;
-  font-family: "Open Sans";
-  font-weight: 600;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  background-color: rgba(0, 0, 0, 0.75);
 }
 
 .ReactModal__Overlay {
   opacity: 0;
-  transition: opacity 300ms ease-in-out;
+  transition: opacity 500ms ease-in-out;
 }
 
 .ReactModal__Overlay--after-open {

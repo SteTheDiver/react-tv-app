@@ -2,12 +2,12 @@ import React, { useContext, useState } from "react";
 import { OrdersContext } from "../OrdersContext";
 import Selection from "./Selection";
 import Form from "./Form";
-// import Confirmation from "./components/Confirmation";
 
 function Home() {
   const [cart, setCart] = useContext(OrdersContext);
 
   const addToCart = (bundle, program) => {
+    console.log("newcart", cart);
     setCart([...cart, bundle, program]);
   };
 
@@ -24,7 +24,7 @@ function Home() {
         {console.log("cart", cart)}
         <p>Total: {selectionTotal} $</p>
         {/* Map through the array to display the selected package */}
-        <div className="program">
+        <div className="programs__container">
           {cart &&
             cart.length > 0 &&
             cart.map((selection) => (

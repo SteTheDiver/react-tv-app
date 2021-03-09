@@ -4,7 +4,7 @@ import Button from "@material-ui/core/Button";
 
 Modal.setAppElement("#root");
 
-export default function Confirmation(props) {
+export default function Confirmation() {
   const [isOpen, setIsOpen] = useState(false);
 
   function toggleModal() {
@@ -19,7 +19,7 @@ export default function Confirmation(props) {
         color="primary"
         onClick={toggleModal}
       >
-        <span>Order</span>
+        <span>Check out</span>
       </Button>
 
       <Modal
@@ -32,7 +32,7 @@ export default function Confirmation(props) {
       >
         <div className="mymodal__content">
           <div>
-            Your order for {props.price} $ has been confirmed!
+            Your order has been confirmed!
             <br></br> Enjoy our channels!
           </div>
           <Button
