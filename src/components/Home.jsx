@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { OrdersContext } from "../OrdersContext";
 import Selection from "./Selection";
 import Form from "./Form";
@@ -7,11 +7,12 @@ function Home() {
   const [cart, setCart] = useContext(OrdersContext);
 
   const addToCart = (bundle, program) => {
-    console.log("newcart", cart);
     setCart([...cart, bundle, program]);
   };
 
-  const selectionTotal = cart.reduce(
+  const newCart = cart.filter((item) => item !== "");
+
+  const selectionTotal = newCart.reduce(
     (total, { price = 0 }) => total + price,
     0
   );
@@ -21,13 +22,13 @@ function Home() {
       <Form onAdd={addToCart} />
       <main>
         <h2>Your selection:</h2>
-        {console.log("cart", cart)}
+        {console.log("new cart", newCart)}
         <p>Total: {selectionTotal} $</p>
         {/* Map through the array to display the selected package */}
         <div className="programs__container">
-          {cart &&
-            cart.length > 0 &&
-            cart.map((selection) => (
+          {newCart &&
+            newCart.length > 0 &&
+            newCart.map((selection) => (
               <Selection
                 key={selection.index}
                 id={selection.id}
